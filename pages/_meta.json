@@ -1,15 +1,13 @@
 {
-  "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
-  "about": {
-    "title": "About",
-    "type": "page"
+  "index": "Hello",
+  "user": {
+    "title": "User Docs"
   },
-  "contact": {
-    "title": "Contact ↗",
+  "developer": "Developer Docs",
+  "about": {
+    "title": "About ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://daohaus.club",
     "newWindow": true
   }
 }
