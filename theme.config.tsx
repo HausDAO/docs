@@ -27,7 +27,9 @@ const config: DocsThemeConfig = {
   sidebar: {
     titleComponent({ title, type }) {
       if (type === "separator") {
-        return <></>;
+        // return <></>;
+
+        return <div>{title}</div>;
       }
       if (title === "Hello") {
         return <>👋 {title}</>;
