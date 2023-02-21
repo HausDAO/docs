@@ -5,8 +5,6 @@ sidebar_label: Tx Polling Service
 slug: /devs/tx-polling
 ---
 
-import useBaseUrl from "@docusaurus/useBaseUrl";
-
 ## Transaction Polling Service
 
 ### Overview
@@ -78,5 +76,3 @@ await MolochService({
   version: daoOverview.version,
 })("submitProposal")({ args, address, poll, onTxHash });
 ```
-
-<img alt="Transaction Diagram" src={useBaseUrl("img/tx_diagram.png")} />

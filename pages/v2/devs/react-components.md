@@ -5,8 +5,6 @@ sidebar_label: React/Components
 slug: /devs/react-components
 ---
 
-import useBaseUrl from "@docusaurus/useBaseUrl";
-
 #### Keep 'em simple
 
 It should be easy to understand the rendering logic of a React Component. Can someone understand your Component after five minutes of reading it? If not, then it needs to be refactored.

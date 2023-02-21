@@ -5,8 +5,6 @@ sidebar_label: React/useEffect
 slug: /devs/react-use-effect
 ---
 
-import Link from "@docusaurus/Link";
-
 useEffect is a big enough pain in the hip to justify its own page. While powerful and extremely useful, there are common conventions that devs should follow in order to prevent it from causing strange, strange bugs.
 
 #### Include all dependencies in the dependency array
@@ -56,6 +54,6 @@ const [value, setValue] = useState(() => {
 
 #### When to use the useRef/useEffect pattern
 
-Read more about this in <Link to='docs/devs/utilities-patterns'> Common Utilities and Patterns</Link>
+Read more about this in Common Utilities and Patterns section
 
 #### Always unsubscribe from listeners
