@@ -25,3 +25,9 @@ body {
     display: none;
   }
 }
+
+@media (max-width: 420px) {
+  .Header__brand {
+    font-size: 1.1rem;
+  }
+}

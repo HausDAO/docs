@@ -1,9 +1,14 @@
 {
   "index": "Hello",
   "user": {
-    "title": "User Docs"
+    "title": "Users"
   },
-  "developer": "Developer Docs",
+  "developer": "Developers",
+  "--": {
+    "title": "Archive",
+    "type": "separator"
+  },
+  "v2": "DAOhaus v2",
   "about": {
     "title": "About ↗",
     "type": "page",

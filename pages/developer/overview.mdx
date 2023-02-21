@@ -1,0 +1,84 @@
+# Overview
+
+The _DAOhaus Toolbox_ is a modular, composable set of libraries that can be integrated into your own projects. It is a collection of tools that can be used to extend the DAOhaus functionality or to integrate DAOhaus functionality into an existing project.
+
+DAOhaus v3 represents a move toward increased decentralization in our infrastructure and tooling. As we identified the core elements in each area of v3's functionality, we began building the libraries and tooling to support it. We then used these libraries and tools in creating our own DAOhaus v3 applications.
+
+When we made the decision for DAOhaus v3 to be much more composable and modular, we also decided that we would open source the tooling that we create in making v3. Every library and utility contained in the _DAOhaus Toolbox_ is used in our own DAOhaus v3 applications. We've made continual refinements and improvements along the way as we discover them in our own use cases.
+
+There is a wide range of possibilities for communities and developers using our tooling. If you're looking to build a tool that extends DAOhaus functionality you can integrate our **Utility Libraries**. As a developer, you can choose if you want to use our component library and theming or if you'd like to build your own UI and styles and leverage our data libraries to query and interact with a user's DAOs.
+
+We've also open sourced our _Feature Libraries_ which are typically a combination of UI and data elements to create specific functionality such as in _DAOhaus Connect_.
+
+## Features
+
+We're using a monorepo to manage our libraries and apps. Each library can be installed via `npm` for use in an external app or tool that you're building.
+
+Our libraries in the libs folder are structured to be consumed by our apps as well as used by external developers using our tooling.
+
+**Utility Libraries**
+The [Common](../sdk/utilities/common-utilities/overview) and [Contract](../sdk/utilities/contract-utilities/overview) libraries provide foundational utility that can be composed and integrated into applications.
+
+- [DAO Data SDK](../sdk/data/overview)
+- [Component Library](../sdk/ui/overview)
+
+**Feature Libraries**
+These compose together other libraries such as the DAO Data SDK and the Component Library to create "smart components" that can be integrated into applications.
+
+- [DAOhaus Connect](../sdk/features/daohaus-connect)
+- [Form Builder](../sdk/features/form-builder)
+- [Transaction Builder](../sdk/features/transaction-builder)
+
+Each of these libraries can be found in our [DAOhaus v3 Monorepo](https://github.com/HausDAO/daohaus-monorepo) in the `/libs` folder and are included in the Toolbox documentation.
+
+## DAOhaus v3 Monorepo Overview
+
+Our monorepo follows the [recommended Nx structure](https://nx.dev/more-concepts/folder-structure#integrated-repo-folder-structure) with `apps` and `libs` folders. The `apps` folder contains our core applications, subgraphs, and infrastructure jobs. If you want to see how we utilize the libraries in the _DAOhaus Toolbox_ in our own v3 app development check out the packages in this folder.
+
+The `libs` folder contains the utilities, libraries, and infrastructure resources included in the _DAOhaus Toolbox_
+
+| Lib                                                                                                              | Monorepo Location              | npm Link                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------ | -------------------------------------------------------------------------------------------------- |
+| [ABI Utilities](https://github.com/HausDAO/daohaus-monorepo/blob/develop/libs/abi-utilities)                     | `libs/abi-utilities`           | [@daohaus/abi-utilities](https://www.npmjs.com/package/@daohaus/abi-utilities)                     |
+| [Contract Utilities](https://github.com/HausDAO/daohaus-monorepo/blob/develop/libs/contract-utilities)           | `libs/contract-utilties`       | [@daohaus/contract-utilities](https://www.npmjs.com/package/@daohaus/contract-utilities)           |
+| [Common Utilities](https://github.com/HausDAO/daohaus-monorepo/blob/develop/libs/common-utilities)               | `libs/common-utilities`        | [@daohaus/common-utilities](https://www.npmjs.com/package/@daohaus/common-utilities)               |
+| [DAO Data SDK](https://github.com/HausDAO/daohaus-monorepo/blob/develop/libs/dao-data)                           | `libs/dao-data-sdk`            | [@daohaus/dao-data](https://www.npmjs.com/package/@daohaus/dao-data)                               |
+| [Component Library (UI)](https://github.com/HausDAO/daohaus-monorepo/blob/develop/libs/ui)                       | `libs/ui`                      | [@daohaus/ui](https://www.npmjs.com/package/@daohaus/ui)                                           |
+| [DAOhaus Connect Feature](https://github.com/HausDAO/daohaus-monorepo/blob/develop/libs/daohaus-connect-feature) | `libs/daohaus-connect-feature` | [@daohaus/daohaus-connect-feature](https://www.npmjs.com/package/@daohaus/daohaus-connect-feature) |
+| [Form Builder Feature](https://github.com/HausDAO/daohaus-monorepo/blob/develop/libs/form-builder)               | `libs/form-builderr`           | [@daohaus/haus-form-builder](https://www.npmjs.com/package/@daohaus/haus-form-builder)             |
+| [Tx Builder Feature](https://github.com/HausDAO/daohaus-monorepo/blob/develop/libs/tx-builder-feature)           | `libs/tx-builder-feature`      | [@daohaus/tx-builder-feature](https://www.npmjs.com/package/@daohaus/tx-builder-feature)           |
+| [Helm Chart Infrastructure Playbook](https://github.com/HausDAO/daohaus-monorepo/blob/develop/libs/infra-chart)  | `libs/infra-chart`             |
+
+These libraries are also published to `npm`. Each of the library docs contain links and installation instructions.
+
+## Using the Libraries
+
+Our libraries are designed to be modular. Depending on the use case developers can integrate with the DAO data layer, use DAOhaus UI building blocks, or a combination of both.
+
+Here are common pathways to get you started:
+
+### Data Only
+
+Our data fetching utilities and functions are separate from our UI and theming libraries. This enables developers to create custom apps with UI separate from DAOhaus's styles and components. This approach can also be used to integrate DAOhaus's data packages into an existing application, such as one that reads a connected user's DAO proposals.
+
+**Example Use Case:** Developers who want to build an external app with their own UI theming and component styles. This app would utilize our libraries related to data fetching, such as _DAO Data SDK_, _Common Utilities_, the upcoming _DAO Context_, and potentially the _ABI Utilities_ and _Contract Utilities_.
+
+This approach could be used to create an entire standalone app or integrate DAOhaus data feeds directly into an existing app without having any DAOhaus theming.
+
+### UI and Features
+
+Our _UI_ library is an implementation of our DAOhaus design system. It is a collection of opinionated components that are styled to match the DAOhaus theming present in our official apps. This library contains a range of components, including the overall theme (typeface, core design tokens, etc.) as well as specialized components for forms, modals, toasts, and layouts. The UI library is built on top of `styled components` and also leverages `Radix UI` for certain component primitives.
+
+**Example Use Case**: Building an extension to DAOhaus that is intended to leverage the DAOhaus branding and component stylings. This could be something that extends DAOhaus such as a Boost or additional functionality. These types of apps _may_ include the data packages as well depending on the intended functionality.
+
+Our _Form Builder_ library utilizes DAOhaus form components as part of the core building blocks. This is a powerful library for rapidly developing forms, but note that they utilize DAOhaus components out of the box.
+
+### Full Spectrum
+
+What we've called our _feature libraries_ were designed to be "smart components" that leverage both the UI and data libraries. The data and UI libraries are tightly coupled in these features, and these are designed for developers who want to make an "out of the box" DAOhaus app that leverages the full spectrum of composability that we offer.
+
+An an example, the _DAOhaus Connect_ library includes custom components for connecting a user and displaying basic profile information as well as utilities for handling the chain and other important elements related to wallets. These components leverage both our UI and data packages and are meant to be "batteries included" implementation for external apps.
+
+**Example Use Case:** Developers who are building an app that extends DAOhaus functionality that integrates the DAOhaus theme.
+
+As folks build on top of our tooling we'll have additional examples!
