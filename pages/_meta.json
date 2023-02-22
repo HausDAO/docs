@@ -1,8 +1,6 @@
 {
   "index": "Hello",
-  "user": {
-    "title": "Users"
-  },
+  "user": "DAO Operators",
   "developer": "Developers",
   "--": {
     "title": "Archive",
