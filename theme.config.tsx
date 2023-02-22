@@ -27,21 +27,20 @@ const config: DocsThemeConfig = {
   sidebar: {
     titleComponent({ title, type }) {
       if (type === "separator") {
-        // return <></>;
-
         return <div>{title}</div>;
       }
       if (title === "Hello") {
         return <>👋 {title}</>;
       }
-      if (title === "User Docs") {
-        return <>🏰 {title}</>;
+      if (title === "DAO Operators") {
+        return <>🚜 {title}</>;
       }
-      if (title === "Developer Docs") {
+      if (title === "Developers") {
         return <>⚒️ {title}</>;
       }
       return <>{title}</>;
     },
+    defaultMenuCollapseLevel: 1,
   },
   feedback: {
     content: null,
