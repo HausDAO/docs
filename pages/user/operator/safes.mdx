@@ -1,0 +1,40 @@
+# Safes
+
+TODO: Add v3 info and images
+
+## Safe Overview
+
+The Safes page will show all of the safes your DAO manages.
+
+There are 2 types:
+
+- Ragequittable: the main treasury for the DAO. When members rage quit they can take a portion of this safe's tokens.
+- Non-ragequitable: sidecar safes that can hold assets that will members do not have ecite right over.
+
+## How Ownership Works
+
+All members share direct ownership of the treasury based on their Shares and/or Loot in relation to one another. Shares grant **voting power** as well as a claim to the Treasury funds, whereas Non-voting tokens (Loot) only grants you rights to the funds in the Treasury.
+
+To help you visualise, here is an example of a simple DAO with 600 DAI in the Treasury.
+
+| Member | Shares | Loot | Voting Power | Exit Value |
+| ------ | ------ | ---- | ------------ | ---------- |
+| Alice  | 10     | 0    | 25%          | 100 DAI    |
+| Bob    | 10     | 10   | 25%          | 200 DAI    |
+| Chris  | 20     | 0    | 50%          | 200 DAI    |
+| Dani   | 0      | 10   | 0%           | 100 DAI    |
+| Total  | 40     | 20   | 100%         | 600 DAI    |
+
+In the above example, as Bob has 10 / 40 shares, he has 25% of voting power. If he wants to withdraw from the treasury, he can claim 33% of the funds (200 DAI) because the sum total of his Shares + Loot take up 33% of the total.
+
+As Dani has no Shares, she has no voting power. If she wants to withdraw from the Treasury, her 10 loot grants her 16% of the Treasury funds (96 DAI)
+
+When members RageQuit or are Guild Kick-ed, this is how their Exit Amounts are calculated
+
+## Common Treasury Use Cases
+
+TBD
+
+## Common sidecar Safe Use Cases
+
+TBD
