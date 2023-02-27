@@ -2,7 +2,7 @@ import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
-  docsRepositoryBase: "https://github.com/HausDAO/docs",
+  docsRepositoryBase: "https://github.com/HausDAO/docs/blob/develop",
   logo: (
     <>
       <img src="/haus-logo-sm.png" width="50px" className="Header__logo" />
