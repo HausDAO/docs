@@ -1,30 +1,53 @@
-# Summoning a DAO with DAOhaus V3
+# How to Summon a DAO on DAOhaus V3
 
-Introduction:
-Learn how to summon a DAO using the DAOhaus V3 platform. This guide will help you understand the various parameters and settings available to create a customized and efficient decentralized autonomous organization.
+In this tutorial, we will walk you through the process of summoning a DAO on DAOhaus V3. The previous Hard and Easy Modes and templates are no longer available in V3. Instead, there is a simple form to fill out for summoning a DAO. Let's get started!
 
-Step 1: Preparation
-Before summoning your DAO, carefully consider the different parameters you want to set within your organization. Changes after this point will require a DAO vote.
+1. Visit the DAOhaus Summon Page
 
-Step 2: Summon a DAO
-Visit https://summon.daohaus.fun/ and connect your wallet to get started. Choose from various networks, such as Ethereum Mainnet, Optimism, Polygon, Gnosis, and Arbitrum.
+Go to [https://summon.daohaus.fun/](https://summon.daohaus.fun/) and connect your wallet to the chain you wish to summon on, provided DAOhaus is deployed to that chain. (See here for a list of chains DAOhaus is deployed on: [make a link])
 
-Step 3: Understand DAO Settings
-Primary settings for DAOhaus V3 include:
+2. Fill Out the Form
 
-    Shares and Loot: Both shares and loot are now ERC-20 tokens, offering full composability and compatibility with ERC20-based apps and protocols.
-    Removed Pull Pattern: Sending funds through a proposal and ragequit no longer requires a second step of the receiver withdrawing funds.
-    Shamans and Extensibility: Shamans are external contracts that the DAO can approve for special permissions, enabling a new design space for DAO formation and governance.
-    Governance Parameters: All governance parameters are now adjustable by the DAO (via proposal) or by a governor shaman.
-    Flexible Proposals: Moloch v3 proposals have arbitrary execution, enabling interaction with any smart contract.
-    Gnosis Safe: Using the Zodiac pattern, a Moloch v3 DAO can use a Gnosis Safe as its treasury, supporting all on-chain assets.
-    Advanced Ragequit: Share- and loot-holders can now choose which tokens they want to receive when ragequitting, removing the need for the DAO to approve tokens before receiving/spending them.
+Complete all fields in the form. Those marked with a * are mandatory.
 
-Step 4: Summoning Process
-The summoning process is now simplified, with the templates for fun and hard mode replaced by a form to fill out with the necessary information, as described in the slide deck above.
+**Basic Settings**
+- DAO Name
+- Stake Tokens (Stake tokens represent both voting weight and economic stake within the DAO.)
+- Name: What does your DAO want to name the tokens representing voting stake?
+- Symbol: How would your DAO like to abbreviate the tokens representing voting stake?
+- Select whether each token will be transferable or non-transferable.
+- Voting stake: Should DAO members be allowed to transfer voting stake to other accounts? After summoning, the DAO can change this with a proposal.
+- Non-Voting Stake: Should DAO members be allowed to transfer non-voting stake to other accounts? After summoning, the DAO can change this with a proposal.
 
-Step 5: Customization
-For advanced users who need more customization, consider reaching out to the DAOhaus community on Discord for support.
+**Proposal Timing**
+- Voting Period: How long should proposals remain open for voting?
+- Grace Period: How long is the period between proposal approval and execution? This provides time for members to ragequit their shares before approved proposals are executed.
 
-Conclusion:
-With the updated features and enhanced flexibility of DAOhaus V3, summoning a DAO is now more accessible and efficient than ever. By understanding the various settings and parameters, you can create a customized and powerful decentralized organization tailored to your specific needs.
+**Advanced Governance**
+- Quorum %: What is the minimum percentage of DAO members (voting stake) required to approve a proposal for it to be executed? This percentage can greatly affect DAO operations. After summoning, the DAO can change it with a proposal.
+- Min Retention %: What is the maximum percentage of DAO members (voting and non-voting stake) required to remain in the DAO after grace period? If the percentage falls below this number, the proposal is not executed.
+- Sponsor Threshold: What is the minimum number of voting stake tokens a member needs to sponsor a proposal?
+- New Offering (ETH): Would you like to require a fee to submit proposals? This feature is intended to protect against spam proposals. Fees in the form of native asset go into the DAO treasury.
+
+**Starting Members**
+You must have at least one member to summon. Add other summoning members as desired. Members can be added later through a proposal.
+- Input member list with member address, voting stake amount, and non-voting stake amount per row using spaces. Example: 0x00000000000000 20 0 0x00000000000000 10 0
+
+**Starting Shamans**
+Shamans are powerful and have control over key components of the DAO. Use caution in the spirit world.
+
+3. Review and Summon
+
+After the form has been completely filled out, review your entries to ensure everything is correct. When you're ready, click the **Summon A DAO** button.
+
+4. Confirm the Transaction
+
+Click confirm on your wallet to start the transaction. Gas fees apply. After a few moments, your transaction will complete, and you can click the "View DAO" button to see your DAO.
+
+5. Update DAO Settings
+
+In the DAO settings, which can be accessed by clicking on "More" and then "Settings," you can change settings from the summoning (if the DAO approves them). If you click the "Update Setting" button in the "Metadata Card," you can provide important information about your DAO, such as the name, description, and links to your DAO's social media and website.
+
+Once you have made the changes, click "Submit" to start the process with your wallet.
+
+**Congratulations, you have summoned a DAO on DAOhaus!**
