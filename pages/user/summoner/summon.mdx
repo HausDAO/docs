@@ -1,60 +1,30 @@
-# Summon a DAO
+# Summoning a DAO with DAOhaus V3
 
-todo: v3 content
+Introduction:
+Learn how to summon a DAO using the DAOhaus V3 platform. This guide will help you understand the various parameters and settings available to create a customized and efficient decentralized autonomous organization.
 
-### How to Summon a DAO
+Step 1: Preparation
+Before summoning your DAO, carefully consider the different parameters you want to set within your organization. Changes after this point will require a DAO vote.
 
-It is important that before you summon your DAO you have carefully considered the different parameteres you want executed within your organization, this is because after you summon your DAO you will **not** be able to change the primary settings that are laid out below.
+Step 2: Summon a DAO
+Visit https://summon.daohaus.fun/ and connect your wallet to get started. Choose from various networks, such as Ethereum Mainnet, Optimism, Polygon, Gnosis, and Arbitrum.
 
-#### Explanations of available Settings
+Step 3: Understand DAO Settings
+Primary settings for DAOhaus V3 include:
 
-**Primary Token**: Which token to accept for proposal deposits and rewards, if any
+    Shares and Loot: Both shares and loot are now ERC-20 tokens, offering full composability and compatibility with ERC20-based apps and protocols.
+    Removed Pull Pattern: Sending funds through a proposal and ragequit no longer requires a second step of the receiver withdrawing funds.
+    Shamans and Extensibility: Shamans are external contracts that the DAO can approve for special permissions, enabling a new design space for DAO formation and governance.
+    Governance Parameters: All governance parameters are now adjustable by the DAO (via proposal) or by a governor shaman.
+    Flexible Proposals: Moloch v3 proposals have arbitrary execution, enabling interaction with any smart contract.
+    Gnosis Safe: Using the Zodiac pattern, a Moloch v3 DAO can use a Gnosis Safe as its treasury, supporting all on-chain assets.
+    Advanced Ragequit: Share- and loot-holders can now choose which tokens they want to receive when ragequitting, removing the need for the DAO to approve tokens before receiving/spending them.
 
-**Proposal Velocity**: How many proposals possible in a day
+Step 4: Summoning Process
+The summoning process is now simplified, with the templates for fun and hard mode replaced by a form to fill out with the necessary information, as described in the slide deck above.
 
-**Voting Period**: How long proposals are open for voting
+Step 5: Customization
+For advanced users who need more customization, consider reaching out to the DAOhaus community on Discord for support.
 
-**Grace Period**: How long members have to ragequit before a proposal is processed
-
-**Proposal Deposit**: Used to protect against member spam. Deposited by user when sponsoring a proposal. Returned to their internal balance (minus processing reward if applicable) after the proposal is processed.
-
-**Proposal Reward**: Used to reward members who process proposals. Originally meant to reimburse those spending gas to process proposals, so not as necessary on networks like xDAI and Polygon.
-
-### Fun Mode
-
-Choose your network, a template, and [Summon a DAO](https://app.daohaus.club/summon) with one click. Along with Ethereum Mainnet, you can also summon on some other [networks](networks):
-
-> Note: At least one summoner is required, so someone has some voting power to start. By default, your own address will be added as the summoner with 1 share and you can modify/add up to 50 others, as well as define share numbers for each.
-
-#### Templates
-
-These templates are based on what real communities have used, and thus are a great place to start. If you're sure you want to do something different, you can use Hard Mode or hit us up in our [Discord](https://discord.gg/daohaus) for help.
-The most important considerations are how fast you'd like to move, and which token you'd like to use primarily (for proposal deposits and rewards).
-
-Slower is typically more secure as it gives members time to process and vote on proposals that may be incredibly high value. Faster is usually less secure, as a potentially malicious proposal could sneak through without members getting a chance to vote it down.
-
-**Guilds**
-
-Best for Cooperatives with small to medium financial throughput.
-
-**Grants**
-
-Distribute wealth together. Medium to Large financial throughput
-
-**Investments**
-
-Large to XXL financial throughput.
-
-**Protocols/Products**
-
-Govern a protocol or product.
-
-**Social Clubs**
-
-Little to no financial decisions.
-
-### Hard Mode
-
-For Advanced users only, who know what they are doing. If you really need to do something custom, find us in our Discord and we'll help you out.
-
-Note: Your address must be at the top of the summoner list (if there are multiple summoners) in order to complete DAO registration.
+Conclusion:
+With the updated features and enhanced flexibility of DAOhaus V3, summoning a DAO is now more accessible and efficient than ever. By understanding the various settings and parameters, you can create a customized and powerful decentralized organization tailored to your specific needs.
