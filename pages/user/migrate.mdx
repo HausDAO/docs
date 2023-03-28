@@ -1,0 +1,74 @@
+# Migrate V2 to V3
+
+There are a few methods for migrating your DAO on [DAOhaus v2](https://app.daohaus.club/) into a moloch v3 contract used in [DAOhaus v3](https://admin.daohaus.club/).
+
+### DAO proposals to transfer all funds
+
+This requires a proposal for every asset in the treasury. So if you only have one asset it's not too big of an issue but if you have many assets this can be a lot of overhead and coordination.
+
+Beforehand the new v3 DAO should clone the existing members loot and share holdings. This can be done during summoning or in a proposal.
+
+### Coordinated Ragequit and Restake
+
+All members ragequit, withdraw their funds and then stake into the new dao.
+
+This has very high coordination effort and there is no guarantee that all members will make the transition.
+
+This keeps funds under control of the members at all times
+
+### Single ‘royal ragequit’ and transfer
+
+**(maybe best option of all of them)**
+
+Beforehand the new v3 DAO should be setup to clone the existing members loot and share holdings at a snapshot.
+
+Then create a new member proposal (v3 target safe) on the v2 dao for 1000x more Loot then the current total supply of loot and shares. When they ragequit they will be able to withdraw all funds except for a very small amount of dust.
+
+This new member should be the target safe of the new v3 DAO, it will require a single multi-call proposal to withdraw all funds from the v2 into the v3 'target' safe.
+
+Funds remain ragequitable except for the short period during the proposal to withdraw funds, this could even be timed to limit that period to almost instant.
+
+**Alternate** - A safe with a delegated trusted team of signers that will summon a new v3 module on the safe that ragequits
+
+### Minion spool
+
+Transfer all funds from the main treasury to a DAO controlled Minion Safe. 'Upgrade' that safe with the Moloch v3 module. This can be done in the Safe Summon app.
+
+This might be especially good if the DAO already has most funds in a minion safe.
+
+**Notes**
+
+- If the DAO has many minion Safes than only one can be the primary target of the v3 but the others can be side vaults where the v3 is a module but the safe is not marked as the 'target' in the v3 dao contract.
+- Some minion safes are not to be ragequitable, these should not be set as the primary 'target' treasury of the new dao.
+- Every transfer of a minion would require a proposal on the v2 DAO.
+
+### Combo
+
+Mature DAOs will have many tokens in the main treasury and many Minion Safes. It will probably require some mix of the above options to do a full migration. Timing and orchestration will be important considerations.
+
+## Moloch V3(baal) to V3x migrate/eject Patterns
+
+The loot/shares tokens are erc20s and can be used like any other token without being attached to the governance contract (no dependencies on baal.sol)
+
+> With any upgrades make sure you do not lose control of the treasury. The governance contract baal.sol may be the only signer/module on the Safe. So if baal.sol is disabled because it is not attached to valid loot/shares, there can be no dao proposals and no way to access the funds. Before doing any upgrade it would make sense to add a delegated team of signers or another module that can access funds in the Safe.
+
+### Eject token by changing ownership
+
+The loot and shares token are erc20s with ownership by the Baal.sol contract, the DAO can change ownership to another contract which would disable the baal contract.
+
+This should be done with caution for a few reasons.
+
+- if ownership is renounced or changed to a contract that can not call the 'onlyOwner' functions (mint/burn/upgrade/change owner) will be disabled.
+- if the token is no longer attached to baal it will be disabled and this could disable the current treasury as well.
+
+### Eject token with upgrade
+
+The erc20 tokens are upgradable which means the current logic can be changed and new logic can be added, while keeping the state (vote power/delegations) and the same address. This would usually happen through dao proposal, or if the token has been ejected, by the new owner.
+
+### Upgrade existing token to baal governance
+
+Any current token that implements the same interface as LootERC20.sol or SharesERC20.sol or an upgradable token could be used in baal.
+
+## Get help
+
+Want some help with the migration? Some chat on the DAOhaus [discord server](https://discord.gg/daohaus) #v3-migration channel.
