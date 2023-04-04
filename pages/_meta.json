@@ -2,6 +2,7 @@
   "index": "Hello",
   "user": "DAO Operators",
   "developer": "Developers",
+  "v3Upgrade": "v3 Upgrade",
   "--": {
     "title": "Archive",
     "type": "separator"
