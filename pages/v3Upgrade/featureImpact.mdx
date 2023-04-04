@@ -1,1 +1,75 @@
-# Upgrade notice
+### V2 App Feature Impact
+
+#### Summoner
+
+![summoner](https://i.imgur.com/UeLbfbC.jpg)
+
+- v2 Summoning will be turned off.
+- All new DAOs will be on Moloch v3 contracts.
+- v2 metadata relies upon centralized infrastructure. We are deprecating this infra and v2 DAOs will no longer function.
+
+#### Metadata
+
+![metadata](https://i.imgur.com/SEdvzxp.png)
+
+- Deprecating v2 infrastructure will render DAO metadata to be immutable.
+- All your DAO metadata will no longer be editable after the snapshot.
+  - Proposal Playlist
+  - Name, description, tags, social links
+  - Avatar
+  - Custom UI Themes
+- v2 metadata relies upon centralized infrastructure.
+
+---
+
+This is a big one. We need to communicate the date of the snapshot and make sure to notify DAOs.
+
+#### Boosts
+
+![boosts](https://i.imgur.com/5m5Za7E.png)
+
+- We shut off new activation of Boosts.
+- You will no longer be able to add any new boosts to your DAO, or edit any currently active boosts.
+- Existing boosts will remain active. DAObooks and MintGate will no longer be functional. Eventually many of the boost features may no longer be accessible or experience technical issues.
+- Boost activation and settings are tracked on a centralized database, that we are deprecating along with all the rest.
+
+##### Discord Notifications
+
+- Will continue to maintain
+- Have not set a deprecation date
+
+#### Advanced UI
+
+##### Vault Charts
+
+![vaults](https://i.imgur.com/u7K1b9F.png)
+
+- Vault charts will be removed.
+- DAOs will still be able to access their vault cards, pages, and token holdings, but the vault chart UI (performance over time) will no longer be visible.
+- We are deprecating one of our sub-graphs to cut down on query fees. We are also no longer using the centralized API that pushes this data.
+
+##### Member Charts
+
+![members](https://i.imgur.com/3sUaTFZ.png)
+
+- Member charts will be removed.
+- The member chart UI (membership over time) will no longer be visible.
+- We are deprecating one of our sub-graphs to cut down on query fees. We are also no longer using the centralized API that pushes this data.
+
+##### Activity Feeds
+
+![activity-feed](https://i.imgur.com/AL1Nyhf.png)
+
+![members-feed](https://i.imgur.com/p39H4fj.png)
+
+- We are deprecating activity feeds across all DAOs.
+- On the DAO homepage and members page, `Recent Activity` will no longer be visible.
+- We are deprecating one of our sub-graphs to cut down on query fees. We are also no longer using the centralized API that pushes this data.
+
+##### Explore Filters
+
+![filters](https://i.imgur.com/Us5F3KG.png)
+
+- We are removing the filtering on the `Explore DAOs` page.
+- You will no longer be able to filter DAOs by Purpose and potentially other filter terms.
+- We are deprecating one of our sub-graphs to cut down on query fees. We are also no longer using the centralized API that pushes this data.
