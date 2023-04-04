@@ -38,6 +38,9 @@ const config: DocsThemeConfig = {
       if (title === "Developers") {
         return <>⚒️ {title}</>;
       }
+      if (title === "V3 Upgrade") {
+        return <>🚀 {title}</>;
+      }
       return <>{title}</>;
     },
     defaultMenuCollapseLevel: 1,
