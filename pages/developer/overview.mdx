@@ -16,18 +16,20 @@ We're using a monorepo to manage our libraries and apps. Each library can be ins
 
 Our libraries in the libs folder are structured to be consumed by our apps as well as used by external developers using our tooling.
 
-**Utility Libraries**
-The [Common](../sdk/utilities/common-utilities/overview) and [Contract](../sdk/utilities/contract-utilities/overview) libraries provide foundational utility that can be composed and integrated into applications.
+### Utility Libraries
 
-- [DAO Data SDK](../sdk/data/overview)
-- [Component Library](../sdk/ui/overview)
+The [Common](../developer/sdk/utilities/common-utilities/overview) and [Contract](../developer/sdk/utilities/contract-utilities/overview) libraries provide foundational utility that can be composed and integrated into applications.
 
-**Feature Libraries**
+- [DAO Data SDK](../developer/sdk/data/overview)
+- [Component Library](../developer/sdk/ui/overview)
+
+### Feature Libraries
+
 These compose together other libraries such as the DAO Data SDK and the Component Library to create "smart components" that can be integrated into applications.
 
-- [DAOhaus Connect](../sdk/features/daohaus-connect)
-- [Form Builder](../sdk/features/form-builder)
-- [Transaction Builder](../sdk/features/transaction-builder)
+- [DAOhaus Connect](../developer/sdk/features/daohaus-connect)
+- [Form Builder](../developer/sdk/features/form-builder)
+- [Transaction Builder](../developer/sdk/features/transaction-builder)
 
 Each of these libraries can be found in our [DAOhaus v3 Monorepo](https://github.com/HausDAO/daohaus-monorepo) in the `/libs` folder and are included in the Toolbox documentation.
 
@@ -37,17 +39,18 @@ Our monorepo follows the [recommended Nx structure](https://nx.dev/more-concepts
 
 The `libs` folder contains the utilities, libraries, and infrastructure resources included in the _DAOhaus Toolbox_
 
-| Lib                                                                                                              | Monorepo Location              | npm Link                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------ | -------------------------------------------------------------------------------------------------- |
-| [ABI Utilities](https://github.com/HausDAO/daohaus-monorepo/blob/develop/libs/abi-utilities)                     | `libs/abi-utilities`           | [@daohaus/abi-utilities](https://www.npmjs.com/package/@daohaus/abi-utilities)                     |
-| [Contract Utilities](https://github.com/HausDAO/daohaus-monorepo/blob/develop/libs/contract-utilities)           | `libs/contract-utilties`       | [@daohaus/contract-utilities](https://www.npmjs.com/package/@daohaus/contract-utilities)           |
-| [Common Utilities](https://github.com/HausDAO/daohaus-monorepo/blob/develop/libs/common-utilities)               | `libs/common-utilities`        | [@daohaus/common-utilities](https://www.npmjs.com/package/@daohaus/common-utilities)               |
-| [DAO Data SDK](https://github.com/HausDAO/daohaus-monorepo/blob/develop/libs/dao-data)                           | `libs/dao-data-sdk`            | [@daohaus/dao-data](https://www.npmjs.com/package/@daohaus/dao-data)                               |
-| [Component Library (UI)](https://github.com/HausDAO/daohaus-monorepo/blob/develop/libs/ui)                       | `libs/ui`                      | [@daohaus/ui](https://www.npmjs.com/package/@daohaus/ui)                                           |
-| [DAOhaus Connect Feature](https://github.com/HausDAO/daohaus-monorepo/blob/develop/libs/daohaus-connect-feature) | `libs/daohaus-connect-feature` | [@daohaus/daohaus-connect-feature](https://www.npmjs.com/package/@daohaus/daohaus-connect-feature) |
-| [Form Builder Feature](https://github.com/HausDAO/daohaus-monorepo/blob/develop/libs/form-builder)               | `libs/form-builderr`           | [@daohaus/haus-form-builder](https://www.npmjs.com/package/@daohaus/haus-form-builder)             |
-| [Tx Builder Feature](https://github.com/HausDAO/daohaus-monorepo/blob/develop/libs/tx-builder-feature)           | `libs/tx-builder-feature`      | [@daohaus/tx-builder-feature](https://www.npmjs.com/package/@daohaus/tx-builder-feature)           |
-| [Helm Chart Infrastructure Playbook](https://github.com/HausDAO/daohaus-monorepo/blob/develop/libs/infra-chart)  | `libs/infra-chart`             |
+| Lib                                                                                                                           | Monorepo Location        | npm Link                                                                              |
+| ----------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------- |
+| [ABIs](https://github.com/HausDAO/monorepo/tree/f780f735e6cb73baff933ad1e936c2f660fadc24/libs/abis)                           | `libs/abis`              | [@daohaus/abis](https://www.npmjs.com/package/@daohaus/abis)                          |
+| [Contract Utils](https://github.com/HausDAO/monorepo/tree/f780f735e6cb73baff933ad1e936c2f660fadc24/libs/contract-utils)       | `libs/contract-utils`    | [@daohaus/contract-utils](https://www.npmjs.com/package/@daohaus/contract-utils)      |
+| [Utils](https://github.com/HausDAO/monorepo/tree/f780f735e6cb73baff933ad1e936c2f660fadc24/libs/utils)                         | `libs/utils`             | [@daohaus/utils](https://www.npmjs.com/package/@daohaus/utils)                        |
+| [Data Fetch Utils](https://github.com/HausDAO/monorepo/tree/f780f735e6cb73baff933ad1e936c2f660fadc24/libs/data-fetch-utils)   | `libs/dao-data-sdk`      | [@daohaus/dao-data](https://www.npmjs.com/package/@daohaus/data-fetch-utils)          |
+| [Component Library (UI)](https://github.com/HausDAO/monorepo/tree/f780f735e6cb73baff933ad1e936c2f660fadc24/libs/ui)           | `libs/ui`                | [@daohaus/ui](https://www.npmjs.com/package/@daohaus/ui)                              |
+| [Connect](https://github.com/HausDAO/monorepo/tree/f780f735e6cb73baff933ad1e936c2f660fadc24/libs/connect)                     | `libs/connect`           | [@daohaus/connect](https://www.npmjs.com/package/@daohaus/connect)                    |
+| [Connect Context](https://github.com/HausDAO/monorepo/tree/f780f735e6cb73baff933ad1e936c2f660fadc24/libs/connect-context)     | `libs/connect-context`   | [@daohaus/connect-context](https://www.npmjs.com/package/@daohaus/connect-context)    |
+| [Form Builder Base](https://github.com/HausDAO/monorepo/tree/f780f735e6cb73baff933ad1e936c2f660fadc24/libs/form-builder-base) | `libs/form-builder-base` | [@daohaus/orm-builder-base](https://www.npmjs.com/package/@daohaus/form-builder-base) |
+| [Form Builder](https://github.com/HausDAO/monorepo/tree/f780f735e6cb73baff933ad1e936c2f660fadc24/libs/form-builder)           | `libs/form-builder`      | [@daohaus/form-builder](https://www.npmjs.com/package/@daohaus/form-builder)          |
+| [Tx Builder](https://github.com/HausDAO/monorepo/tree/f780f735e6cb73baff933ad1e936c2f660fadc24/libs/tx-builder)               | `libs/tx-builder`        | [@daohaus/tx-builder](https://www.npmjs.com/package/@daohaus/tx-builder)              |
 
 These libraries are also published to `npm`. Each of the library docs contain links and installation instructions.
 
